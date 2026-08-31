@@ -8,7 +8,6 @@ import {useUserTheme} from './app/theme/use-user-theme.js';
 import siteConfig from '../site.config.json';
 
 const WEBSITE_REPOSITORY_URL = `https://github.com/${siteConfig.websiteRepository}`;
-const DOCS_URL = siteConfig.documentationUrl;
 const CONTENT_LINK_SELECTORS = [
     'a[href]',
     'md-filled-button',
@@ -131,7 +130,7 @@ function PrimaryNavigation({activePage}) {
         ['home', 'home', '首页', '/home'],
         ['video', 'smart_display', '教程视频', '/video'],
         ['download', 'download', '资源下载', '/download'],
-        ['docs', 'description', '教程文档', DOCS_URL],
+        ['docs', 'description', '教程文档', '/docs'],
         ['about', 'info', '关于项目', '/about'],
         ['community', 'forum', '加入社区', '/community'],
         ['feedback', 'feedback', '提交反馈', '/feedback']

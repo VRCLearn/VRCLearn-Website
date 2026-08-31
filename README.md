@@ -34,8 +34,9 @@ npm run preview
 ## 站点边界
 
 - 主站页面：`https://www.vrclearn.com/*`
+- 主站文档入口页：`https://www.vrclearn.com/docs`
 - 文档站：`https://docs.vrclearn.com/*`
-- 主站仅通过导航入口和页面按钮直接链接到文档站。
+- 主站导航先进入本地 `/docs` 入口页，再由页面按钮直接链接到文档站；该页面不拉取、编译或内嵌文档内容。
 
 VRCLearn 主站的项目名称、规范域名、文档入口、仓库地址、页面元信息和统计 ID 统一维护在 `site.config.json`。Vite、React 页面和构建脚本均读取该文件，不需要在部署平台重复配置这些信息。
 

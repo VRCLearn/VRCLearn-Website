@@ -12,6 +12,7 @@ const staticEntries = [
     {pathname: '/home', sourcePath: 'src/app/pages/static-pages.jsx'},
     {pathname: '/video', sourcePath: 'src/app/pages/static-pages.jsx'},
     {pathname: '/download', sourcePath: 'src/app/pages/static-pages.jsx'},
+    {pathname: '/docs', sourcePath: 'src/app/pages/static-pages.jsx'},
     {pathname: '/about', sourcePath: 'src/app/pages/static-pages.jsx'},
     {pathname: '/community', sourcePath: 'src/app/pages/static-pages.jsx'},
     {pathname: '/feedback', sourcePath: 'src/app/pages/static-pages.jsx'}

@@ -22,7 +22,7 @@ function HomePage() {
                 <h2 className="card__title">快速开始</h2>
                 <p>如果你已经阅读过本页内容，你可以从以下入口快速开始学习或参与项目建设：</p>
                 <div className="card__actions" aria-label="快速入口">
-                    <ActionButton href={DOCS_URL} data-direct-link="1">立即开始学习</ActionButton>
+                    <ActionButton href="/docs">立即开始学习</ActionButton>
                     <ActionButton href="/community">加入社区</ActionButton>
                     <ActionButton href="/feedback">提交反馈</ActionButton>
                 </div>
@@ -161,6 +161,21 @@ function DownloadPage() {
                 <p>最终备用下载源，仅适合在前两种方式不可用时使用。</p>
                 <div className="card__actions" aria-label="备用下载">
                     <ActionButton href={downloadPageLinks.backup} icon="download">备用下载</ActionButton>
+                </div>
+            </div>
+        </>
+    );
+}
+
+function DocsPage() {
+    return (
+        <>
+            <p className="page-body">这里是 VRCLearn 主站的教程文档入口。文档内容由独立文档站维护，本页不会在主站内加载或复制文档。</p>
+            <div className="card card--emphasis">
+                <h2 className="card__title">进入文档站</h2>
+                <p>点击下方按钮前往 VRCLearn Docs，阅读 Avatar、World 与其他 VRCLearn 项目的文档。</p>
+                <div className="card__actions" aria-label="教程文档入口">
+                    <ActionButton href={DOCS_URL} data-direct-link="1" icon="open_in_new">进入文档站</ActionButton>
                 </div>
             </div>
         </>
@@ -358,6 +373,10 @@ export const staticPages = {
     download: {
         title: '资源下载',
         component: DownloadPage
+    },
+    docs: {
+        title: '教程文档',
+        component: DocsPage
     },
     leaving: {
         title: '你即将离开此网站',
