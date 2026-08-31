@@ -1,0 +1,42 @@
+{
+  "name": "VRCLearn — VRChat 改模教程中心",
+  "short_name": "VRCLearn",
+  "description": "VRCLearn 是面向 VRChat Avatar 改模学习者的中文教程中心。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "id": "/pwa-loading?source=pwa",
+  "start_url": "/pwa-loading?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/pwa-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

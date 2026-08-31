@@ -1,0 +1,13 @@
+{
+    "productName": "VRCLearn",
+    "homepageUrl": "https://www.vrclearn.com/",
+    "documentationUrl": "https://docs.vrclearn.com/",
+    "googleAnalyticsMeasurementId": "G-C21Q20Z7EX",
+    "websiteRepository": "VRCLearn/VRCLearn-Website",
+    "documentationRepository": "VRCLearn/VRCLearn-Docs",
+    "siteMetadata": {
+        "title": "VRCLearn | VRChat 改模教程中心",
+        "description": "VRCLearn 是面向 VRChat Avatar 改模学习者的教程中心。",
+        "socialDescription": "面向 VRChat Avatar 改模学习者的教程中心。"
+    }
+}
