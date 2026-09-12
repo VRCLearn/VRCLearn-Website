@@ -6,19 +6,17 @@ export const DEFAULT_THEME_SOURCE_HEX = '#6cb6ff';
 export const DEFAULT_THEME_MODE = 'auto';
 export const DEFAULT_THEME_SCHEME = 'vibrant';
 
-export const THEME_SCHEME_LABELS = {
-    'tonal-spot': '调性点缀',
-    'fidelity': '高保真',
-    'monochrome': '单色',
-    'neutral': '中性',
-    'vibrant': '活力',
-    'expressive': '表现力',
-    'content': '内容主题',
-    'rainbow': '彩虹',
-    'fruit-salad': '果缤纷'
-};
-
-export const THEME_SCHEME_NAMES = Object.keys(THEME_SCHEME_LABELS);
+export const THEME_SCHEME_NAMES = [
+    'tonal-spot',
+    'fidelity',
+    'monochrome',
+    'neutral',
+    'vibrant',
+    'expressive',
+    'content',
+    'rainbow',
+    'fruit-salad'
+];
 
 export const FULL_THEME_ROLE_NAMES = [
     'primary',

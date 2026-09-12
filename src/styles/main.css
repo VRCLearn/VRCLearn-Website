@@ -14,6 +14,8 @@ md-divider:not(:defined),
 md-icon-button:not(:defined),
 md-list:not(:defined),
 md-list-item:not(:defined),
+md-menu:not(:defined),
+md-menu-item:not(:defined),
 md-filled-button:not(:defined),
 md-filled-tonal-button:not(:defined) {
     visibility: hidden;
@@ -181,12 +183,21 @@ body {
     font-weight: var(--app-header-title-font-weight);
 }
 
-#github-btn {
+.app-header__actions {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--app-header-title-gap);
 }
 
-#theme-panel-toggle-btn {
-    margin-left: var(--app-header-title-gap);
+.language-menu {
+    position: relative;
+    display: flex;
+}
+
+#language-menu {
+    min-width: 160px;
+    --md-menu-container-shape: var(--app-shape-corner-medium);
 }
 
 .app-header__brand-icon {

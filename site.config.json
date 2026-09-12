@@ -6,8 +6,194 @@
     "websiteRepository": "VRCLearn/VRCLearn-Website",
     "documentationRepository": "VRCLearn/VRCLearn-Docs",
     "siteMetadata": {
-        "title": "VRCLearn | VRChat 改模教程中心",
-        "description": "VRCLearn 是面向 VRChat Avatar 改模学习者的教程中心。",
-        "socialDescription": "面向 VRChat Avatar 改模学习者的教程中心。"
+        "defaultLocale": "zh-CN",
+        "localeOrder": [
+            "en-US",
+            "ja-JP",
+            "zh-TW",
+            "zh-CN"
+        ],
+        "socialImagePath": "/pwa-icon-512.png",
+        "localeDetection": {
+            "fallbackLocale": "en-US",
+            "browserLanguageLocales": {
+                "zh": "zh-CN",
+                "zh-CN": "zh-CN",
+                "zh-SG": "zh-CN",
+                "zh-Hans": "zh-CN",
+                "zh-TW": "zh-TW",
+                "zh-HK": "zh-TW",
+                "zh-MO": "zh-TW",
+                "zh-Hant": "zh-TW",
+                "en": "en-US",
+                "ja": "ja-JP"
+            }
+        },
+        "locales": {
+            "zh-CN": {
+                "languageName": "简体中文",
+                "languageSelectorLabel": "选择语言",
+                "title": "VRCLearn | VRChat 改模教程中心",
+                "description": "VRCLearn 是面向 VRChat Avatar 改模学习者的多语言学习中心，提供教程文档、视频入口和相关资源。",
+                "socialDescription": "面向 VRChat Avatar 改模学习者的多语言学习中心。",
+                "utilityTitles": {
+                    "leaving": "你即将离开此网站",
+                    "notFound": "页面未找到"
+                },
+                "pages": {
+                    "home": {
+                        "title": "首页",
+                        "description": "从基础到进阶学习 VRChat Avatar 改模，查找 VRCLearn 教程文档、视频和相关资源。"
+                    },
+                    "video": {
+                        "title": "教程视频",
+                        "description": "通过 YouTube、Bilibili 和备用视频入口观看 VRCLearn 的 VRChat Avatar 改模教程。"
+                    },
+                    "download": {
+                        "title": "资源下载",
+                        "description": "获取 VRChat Avatar 改模所需的 Unity、ALCOMD3 和相关学习资源。"
+                    },
+                    "docs": {
+                        "title": "教程文档",
+                        "description": "前往 VRCLearn Docs 阅读系统化的 VRChat Avatar 改模教程文档。"
+                    },
+                    "about": {
+                        "title": "关于项目",
+                        "description": "了解 VRCLearn 项目、维护信息、开源仓库和参与贡献的方式。"
+                    },
+                    "community": {
+                        "title": "加入社区",
+                        "description": "加入 VRCLearn 社区，交流 VRChat Avatar 改模学习经验、问题和教程内容。"
+                    },
+                    "feedback": {
+                        "title": "提交反馈",
+                        "description": "向 VRCLearn 提交网站问题、教程勘误、资源失效信息和改进建议。"
+                    }
+                }
+            },
+            "en-US": {
+                "languageName": "English",
+                "languageSelectorLabel": "Select language",
+                "title": "VRCLearn | VRChat Avatar Learning Center",
+                "description": "VRCLearn is a multilingual learning center for VRChat avatar customization, offering documentation, video tutorials, and related resources.",
+                "socialDescription": "A multilingual learning center for VRChat avatar customization.",
+                "utilityTitles": {
+                    "leaving": "You Are Leaving This Website",
+                    "notFound": "Page Not Found"
+                },
+                "pages": {
+                    "home": {
+                        "title": "Home",
+                        "description": "Learn VRChat avatar customization from beginner to advanced with VRCLearn documentation, videos, and related resources."
+                    },
+                    "video": {
+                        "title": "Video Tutorials",
+                        "description": "Watch VRCLearn video tutorials for VRChat avatar customization on YouTube, Bilibili, or a backup source."
+                    },
+                    "download": {
+                        "title": "Downloads",
+                        "description": "Get Unity, ALCOMD3, and related learning resources for VRChat avatar customization."
+                    },
+                    "docs": {
+                        "title": "Documentation",
+                        "description": "Visit VRCLearn Docs for structured guides to VRChat avatar customization."
+                    },
+                    "about": {
+                        "title": "About",
+                        "description": "Learn about VRCLearn, its maintainers, open-source repositories, and ways to contribute."
+                    },
+                    "community": {
+                        "title": "Community",
+                        "description": "Join the VRCLearn community to discuss VRChat avatar customization, learning questions, and tutorial content."
+                    },
+                    "feedback": {
+                        "title": "Feedback",
+                        "description": "Report website issues, tutorial corrections, broken resources, and improvement ideas to VRCLearn."
+                    }
+                }
+            },
+            "zh-TW": {
+                "languageName": "繁體中文",
+                "languageSelectorLabel": "選擇語言",
+                "title": "VRCLearn | VRChat 改模教學中心",
+                "description": "VRCLearn 是面向 VRChat Avatar 改模學習者的多語言學習中心，提供教學文件、影片入口和相關資源。",
+                "socialDescription": "面向 VRChat Avatar 改模學習者的多語言學習中心。",
+                "utilityTitles": {
+                    "leaving": "你即將離開此網站",
+                    "notFound": "找不到頁面"
+                },
+                "pages": {
+                    "home": {
+                        "title": "首頁",
+                        "description": "從基礎到進階學習 VRChat Avatar 改模，查找 VRCLearn 教學文件、影片和相關資源。"
+                    },
+                    "video": {
+                        "title": "教學影片",
+                        "description": "透過 YouTube、Bilibili 和備用影片入口觀看 VRCLearn 的 VRChat Avatar 改模教學。"
+                    },
+                    "download": {
+                        "title": "資源下載",
+                        "description": "取得 VRChat Avatar 改模所需的 Unity、ALCOMD3 和相關學習資源。"
+                    },
+                    "docs": {
+                        "title": "教學文件",
+                        "description": "前往 VRCLearn Docs 閱讀系統化的 VRChat Avatar 改模教學文件。"
+                    },
+                    "about": {
+                        "title": "關於專案",
+                        "description": "瞭解 VRCLearn 專案、維護資訊、開源儲存庫和參與貢獻的方式。"
+                    },
+                    "community": {
+                        "title": "加入社群",
+                        "description": "加入 VRCLearn 社群，交流 VRChat Avatar 改模學習經驗、問題和教學內容。"
+                    },
+                    "feedback": {
+                        "title": "提交意見",
+                        "description": "向 VRCLearn 提交網站問題、教學勘誤、資源失效資訊和改進建議。"
+                    }
+                }
+            },
+            "ja-JP": {
+                "languageName": "日本語",
+                "languageSelectorLabel": "言語を選択",
+                "title": "VRCLearn | VRChatアバター改変学習センター",
+                "description": "VRCLearnは、VRChatアバター改変を学ぶ人のための多言語学習センターです。ドキュメント、動画チュートリアル、関連リソースを提供します。",
+                "socialDescription": "VRChatアバター改変を学ぶ人のための多言語学習センター。",
+                "utilityTitles": {
+                    "leaving": "このウェブサイトを離れようとしています",
+                    "notFound": "ページが見つかりません"
+                },
+                "pages": {
+                    "home": {
+                        "title": "ホーム",
+                        "description": "VRCLearnのドキュメント、動画、関連リソースで、VRChatアバター改変を基礎から応用まで学べます。"
+                    },
+                    "video": {
+                        "title": "動画チュートリアル",
+                        "description": "VRCLearnのVRChatアバター改変チュートリアルをYouTube、Bilibili、または予備の動画配信元で視聴できます。"
+                    },
+                    "download": {
+                        "title": "リソースダウンロード",
+                        "description": "VRChatアバター改変に必要なUnity、ALCOMD3、関連学習リソースを入手できます。"
+                    },
+                    "docs": {
+                        "title": "チュートリアルドキュメント",
+                        "description": "VRCLearn Docsで、体系的なVRChatアバター改変ガイドを読むことができます。"
+                    },
+                    "about": {
+                        "title": "プロジェクトについて",
+                        "description": "VRCLearnプロジェクト、メンテナー、オープンソースリポジトリ、貢献方法について紹介します。"
+                    },
+                    "community": {
+                        "title": "コミュニティに参加",
+                        "description": "VRCLearnコミュニティに参加して、VRChatアバター改変の学習経験、質問、チュートリアルについて交流できます。"
+                    },
+                    "feedback": {
+                        "title": "フィードバック",
+                        "description": "VRCLearnにウェブサイトの問題、チュートリアルの訂正、利用できないリソース、改善案を報告できます。"
+                    }
+                }
+            }
+        }
     }
 }

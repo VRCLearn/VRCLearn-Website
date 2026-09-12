@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import {clamp, normalizeHexColor} from '../theme/color-utils.js';
-import {THEME_SCHEME_LABELS, THEME_SCHEME_NAMES} from '../theme/theme-config.js';
+import {THEME_SCHEME_NAMES} from '../theme/theme-config.js';
 
 function ThemePanel({
     displaySourceHex,
@@ -11,6 +11,7 @@ function ThemePanel({
     onSetThemeMode,
     onSetThemeScheme,
     open,
+    messages,
     themeMode,
     themeScheme,
     toggleButtonRef
@@ -166,7 +167,7 @@ function ThemePanel({
         setSchemeListOpen((currentOpen) => !currentOpen);
     };
 
-    const activeSchemeLabel = THEME_SCHEME_LABELS[themeScheme] || THEME_SCHEME_LABELS.vibrant;
+    const activeSchemeLabel = messages.schemes[themeScheme] || messages.schemes.vibrant;
 
     return (
         <section
@@ -177,11 +178,11 @@ function ThemePanel({
         >
             <div className="theme-panel__content">
                 <div className="theme-panel__title-row">
-                    <h2 className="theme-panel__title">Theme Controls</h2>
-                    <md-text-button id="theme-reset-btn" onClick={onReset}>重置</md-text-button>
+                    <h2 className="theme-panel__title">{messages.title}</h2>
+                    <md-text-button id="theme-reset-btn" onClick={onReset}>{messages.reset}</md-text-button>
                 </div>
                 <div className="theme-card">
-                    <label className="theme-card__label" htmlFor="theme-color-input">Hex Source Color</label>
+                    <label className="theme-card__label" htmlFor="theme-color-input">{messages.sourceColor}</label>
                     <div className="theme-card__color-row">
                         <md-outlined-text-field
                             id="theme-color-text"
@@ -195,7 +196,7 @@ function ThemePanel({
                             id="theme-color-input"
                             className="theme-card__picker"
                             value={displaySourceHex}
-                            aria-label="选择主题色"
+                            aria-label={messages.chooseColor}
                             onChange={(event) => onSetSourceHex(event.target.value)}
                         />
                     </div>
@@ -203,21 +204,21 @@ function ThemePanel({
                 <div className="theme-sliders">
                     <div className="theme-slider-group">
                         <label className="theme-slider" htmlFor="theme-hue-input">
-                            <span>Hue</span>
+                            <span>{messages.hue}</span>
                             <md-slider id="theme-hue-input" min="0" max="360" step="1" value={hctValues.hue} labeled ref={hueInputRef} />
                             <span className="theme-slider__track theme-slider__track--hue"></span>
                         </label>
                     </div>
                     <div className="theme-slider-group">
                         <label className="theme-slider" htmlFor="theme-chroma-input">
-                            <span>Chroma</span>
+                            <span>{messages.chroma}</span>
                             <md-slider id="theme-chroma-input" min="0" max="150" step="1" value={hctValues.chroma} labeled ref={chromaInputRef} />
                             <span className="theme-slider__track theme-slider__track--chroma"></span>
                         </label>
                     </div>
                     <div className="theme-slider-group">
                         <label className="theme-slider" htmlFor="theme-tone-input">
-                            <span>Tone</span>
+                            <span>{messages.tone}</span>
                             <md-slider id="theme-tone-input" min="0" max="100" step="1" value={hctValues.tone} labeled ref={toneInputRef} />
                             <span className="theme-slider__track theme-slider__track--tone"></span>
                         </label>
@@ -230,13 +231,13 @@ function ThemePanel({
                         aria-expanded={schemeListOpen}
                         onClick={handleSchemeToggle}
                     >
-                        <span id="theme-scheme-toggle-label">配色方案：{activeSchemeLabel}</span>
+                        <span id="theme-scheme-toggle-label">{messages.scheme}{messages.separator}{activeSchemeLabel}</span>
                         <md-icon slot="icon">palette</md-icon>
                     </md-text-button>
                     <div
                         id="theme-schemes-list"
                         role="radiogroup"
-                        aria-label="配色方案"
+                        aria-label={messages.scheme}
                         hidden={!schemeListVisible}
                         ref={schemeListRef}
                     >
@@ -250,18 +251,18 @@ function ThemePanel({
                                     value={schemeName}
                                     checked={themeScheme === schemeName}
                                 />
-                                <span>{THEME_SCHEME_LABELS[schemeName]}</span>
+                                <span>{messages.schemes[schemeName]}</span>
                             </label>
                         ))}
                     </div>
                 </div>
                 <md-outlined-segmented-button-set
                     className="theme-mode-toggle"
-                    aria-label="主题模式"
+                    aria-label={messages.mode}
                 >
                     <md-outlined-segmented-button
                         data-theme-mode="light"
-                        aria-label="浅色模式"
+                        aria-label={messages.light}
                         selected={themeMode === 'light'}
                         onClick={() => onSetThemeMode('light')}
                     >
@@ -269,7 +270,7 @@ function ThemePanel({
                     </md-outlined-segmented-button>
                     <md-outlined-segmented-button
                         data-theme-mode="auto"
-                        aria-label="自动模式"
+                        aria-label={messages.auto}
                         selected={themeMode === 'auto'}
                         onClick={() => onSetThemeMode('auto')}
                     >
@@ -277,7 +278,7 @@ function ThemePanel({
                     </md-outlined-segmented-button>
                     <md-outlined-segmented-button
                         data-theme-mode="dark"
-                        aria-label="深色模式"
+                        aria-label={messages.dark}
                         selected={themeMode === 'dark'}
                         onClick={() => onSetThemeMode('dark')}
                     >

@@ -8,7 +8,6 @@ import {
     DEFAULT_THEME_MODE,
     DEFAULT_THEME_SCHEME,
     DEFAULT_THEME_SOURCE_HEX,
-    THEME_SCHEME_LABELS,
     THEME_SCHEME_NAMES,
     USER_THEME_COOKIE_KEY,
     USER_THEME_MODE_COOKIE_KEY,
@@ -139,5 +138,3 @@ export function useUserTheme() {
         themeScheme: userThemeScheme
     };
 }
-
-export {THEME_SCHEME_LABELS};
