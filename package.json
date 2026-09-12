@@ -5,11 +5,13 @@
   "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/generate-icons.mjs",
-    "prebuild": "node scripts/generate-icons.mjs && node scripts/generate-sitemap.mjs",
+    "predev": "node scripts/generate-icons.mjs && node scripts/generate-manifest.mjs",
+    "prebuild": "node scripts/generate-icons.mjs && node scripts/generate-manifest.mjs && node scripts/generate-sitemap.mjs",
+    "postbuild": "node scripts/generate-route-html.mjs",
     "dev": "vite",
     "build": "vite build",
     "generate:icons": "node scripts/generate-icons.mjs",
+    "generate:manifest": "node scripts/generate-manifest.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
