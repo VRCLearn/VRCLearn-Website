@@ -8,6 +8,7 @@ import {useUserTheme} from './app/theme/use-user-theme.js';
 import siteConfig from '../site.config.json';
 
 const WEBSITE_REPOSITORY_URL = `https://github.com/${siteConfig.websiteRepository}`;
+const SITE_DOMAIN = new URL(siteConfig.homepageUrl).hostname.toLowerCase().replace(/^www\./, '');
 const CONTENT_LINK_SELECTORS = [
     'a[href]',
     'md-filled-button',
@@ -78,6 +79,11 @@ function getExternalLinkLabel(target, url) {
     const ariaLabel = target.getAttribute('aria-label');
     const textLabel = target.textContent?.replace(/\s+/g, ' ').trim();
     return ariaLabel || textLabel || url.hostname || '外部页面';
+}
+
+function isExcludedExternalLink(url) {
+    const hostname = url.hostname.toLowerCase();
+    return hostname === SITE_DOMAIN || hostname.endsWith(`.${SITE_DOMAIN}`);
 }
 
 function AppHeader({
@@ -340,7 +346,8 @@ export default function App() {
         const isExternalHttpUrl = linkUrl.origin !== window.location.origin
             && (linkUrl.protocol === 'http:' || linkUrl.protocol === 'https:');
         if (isExternalHttpUrl) {
-            if (target.hasAttribute('data-direct-link')) {
+            const isLeavingConfirmationPage = route.type === 'page' && route.page === 'leaving';
+            if (isExcludedExternalLink(linkUrl) || isLeavingConfirmationPage) {
                 return;
             }
             event.preventDefault();

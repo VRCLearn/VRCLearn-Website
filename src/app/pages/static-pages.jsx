@@ -175,7 +175,7 @@ function DocsPage() {
                 <h2 className="card__title">进入文档站</h2>
                 <p>点击下方按钮前往 VRCLearn Docs，阅读 Avatar、World 与其他 VRCLearn 项目的文档。</p>
                 <div className="card__actions" aria-label="教程文档入口">
-                    <ActionButton href={DOCS_URL} data-direct-link="1" icon="open_in_new">进入文档站</ActionButton>
+                    <ActionButton href={DOCS_URL} icon="open_in_new">进入文档站</ActionButton>
                 </div>
             </div>
         </>
